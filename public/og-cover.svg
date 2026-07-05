@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630">
+  <defs>
+    <linearGradient id="g" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#0a0a0b"/>
+      <stop offset="100%" stop-color="#17171a"/>
+    </linearGradient>
+    <radialGradient id="glow" cx="50%" cy="10%" r="60%">
+      <stop offset="0%" stop-color="#ff3b4e" stop-opacity="0.35"/>
+      <stop offset="100%" stop-color="#ff3b4e" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+  <rect width="1200" height="630" fill="url(#g)"/>
+  <rect width="1200" height="630" fill="url(#glow)"/>
+  <text x="80" y="300" font-family="'Space Grotesk', sans-serif" font-size="72" font-weight="700" fill="#f5f5f2">Shahzaman Mughal</text>
+  <text x="80" y="360" font-family="monospace" font-size="28" fill="#ff3b4e">Software Engineer · Business Development Executive</text>
+  <text x="80" y="560" font-family="monospace" font-size="20" fill="#9c9ca3">shahzamanmughal.com — replace this file with a real screenshot (1200x630)</text>
+</svg>

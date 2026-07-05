@@ -1,0 +1,80 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  * {
+    @apply border-ink-700/60;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    @apply bg-ink text-paper;
+    overflow-x: hidden;
+  }
+
+  /* Visible keyboard focus everywhere — accessibility floor. */
+  :focus-visible {
+    outline: 2px solid theme('colors.scalpel.DEFAULT');
+    outline-offset: 3px;
+    border-radius: 2px;
+  }
+
+  ::selection {
+    background: theme('colors.scalpel.DEFAULT');
+    color: theme('colors.paper.DEFAULT');
+  }
+
+  /* Custom scrollbar */
+  ::-webkit-scrollbar {
+    width: 10px;
+  }
+  ::-webkit-scrollbar-track {
+    background: theme('colors.ink.950');
+  }
+  ::-webkit-scrollbar-thumb {
+    background: theme('colors.ink.600');
+    border-radius: 8px;
+  }
+  ::-webkit-scrollbar-thumb:hover {
+    background: theme('colors.scalpel.deep');
+  }
+
+  h1, h2, h3, h4, h5 {
+    @apply font-display;
+  }
+}
+
+@layer components {
+  .container-page {
+    @apply mx-auto w-full max-w-7xl px-6 sm:px-8 lg:px-12;
+  }
+
+  .eyebrow {
+    @apply font-mono text-xs uppercase tracking-[0.3em] text-scalpel-bright/90;
+  }
+
+  .section-pad {
+    @apply py-24 sm:py-32;
+  }
+}
+
+/* Respect users who prefer reduced motion. */
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.001ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+/* Hide default cursor only on fine-pointer devices where the custom cursor renders */
+@media (hover: hover) and (pointer: fine) {
+  .custom-cursor-active {
+    cursor: none;
+  }
+}
